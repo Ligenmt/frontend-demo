@@ -74,6 +74,12 @@ const routeMap = [
         component: LoadingIcon,
         meta: {title: 'Loading动画'}
       },
+      {
+        path: 'cube',
+        name: 'cube',
+        component: ()=>import('@/views/cube'),
+        meta: {title: 'cube'}
+      },
     ]
   },
   {
