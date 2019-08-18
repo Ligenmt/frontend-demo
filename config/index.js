@@ -46,13 +46,13 @@ module.exports = {
     assetsPublicPath: '/',
     //Proxy
     proxyTable: {
-      '/api': {
-        target: 'http://101.132.181.79',//后端接口地址
-        changeOrigin: true,//是否允许跨越
-        pathRewrite: {
-          '^/api': '/api',//重写,
-        }
-      }
+      // '/api': {
+      //   target: 'http://101.132.181.79',//后端接口地址
+      //   changeOrigin: true,//是否允许跨越
+      //   pathRewrite: {
+      //     '^/api': '/api',//重写,
+      //   }
+      // }
     },
     /**
      * Source Maps

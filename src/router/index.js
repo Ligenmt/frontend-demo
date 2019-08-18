@@ -41,12 +41,6 @@ const routeMap = [
                 component: Home,
                 meta: {title: '首页'}
             },
-            {
-                path: 'cube',
-                name: 'cube',
-                component: () => import('@/views/cube'),
-                meta: {title: 'cube'}
-            },
         ]
     },
     {
@@ -76,21 +70,21 @@ const routeMap = [
         ]
     },
     {
-        path: '/project',
-        name: 'project',
+        path: '/example',
+        name: 'example',
         component: Dashboard,
-        redirect: '/project/list',
-        meta: {title: 'Project', icon: 'form'},
+        redirect: '/example/upload',
+        meta: {title: '例子', icon: 'form'},
         children: [
             {
-                path: 'list',
-                name: 'list',
+                path: 'upload',
+                name: 'upload',
                 component: DataUpload,
                 meta: {title: '数据上传'}
             },
             {
-                path: 'add',
-                name: 'add',
+                path: 'query',
+                name: 'query',
                 component: Project,
                 meta: {title: '数据查看'}
             },
@@ -106,7 +100,12 @@ const routeMap = [
                 component: LoadingIcon,
                 meta: {title: 'Loading动画'}
             },
-
+            {
+                path: 'zhihuparticle',
+                name: 'zhihuparticle',
+                component: () => import('@/views/zhihuparticle'),
+                meta: {title: 'zhihuparticle'}
+            },
 
 
         ]
