@@ -24,7 +24,6 @@
 
   .app-container {
     /*background-color: #42b983;*/
-    padding: 0px;
     height: 100%;
   }
 </style>

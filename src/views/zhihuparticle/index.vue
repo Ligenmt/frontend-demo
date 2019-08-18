@@ -121,30 +121,30 @@
                 draw();
             }
             window.addEventListener('load', init(60));
-            window.onmousemove = function (e) {
-                e = e || window.event;
-                current_circle.x = e.clientX;
-                current_circle.y = e.clientY;
-            }
-            window.onmouseout = function () {
-                current_circle.x = null;
-                current_circle.y = null;
-
-            };
+            // window.onmousemove = function (e) {
+            //     e = e || window.event;
+            //     current_circle.x = e.clientX;
+            //     current_circle.y = e.clientY;
+            // }
+            // window.onmouseout = function () {
+            //     current_circle.x = null;
+            //     current_circle.y = null;
+            //
+            // };
         }
     }
 </script>
 
 <style scoped>
-
     .canvas-container {
         width: 100%;
         height: 100%;
         z-index: -2;
+        overflow: hidden;
     }
     .particles {
         width: 100%;
-        height: 100%;
+        height: 99%;
         z-index: -1;
         background-color: #26AFE3;
     }

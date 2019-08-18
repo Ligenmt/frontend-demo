@@ -11,7 +11,6 @@ import Dashboard from '../views/dashboard/Dashboard'
 import Home from '../views/home'
 import Project from '../views/project'
 import DataUpload from '../views/dataupload'
-import Calculate from '../views/calculate'
 import RadioNav from '../views/radionav'
 import LoadingIcon from '../views/loadingicon'
 
@@ -106,11 +105,35 @@ const routeMap = [
                 component: () => import('@/views/zhihuparticle'),
                 meta: {title: 'zhihuparticle'}
             },
-
+        ]
+    },
+    {
+        path: '/pds',
+        component: Dashboard,
+        meta: {title: 'PDS', icon: 'home'},
+        redirect: 'home',
+        children: [
+            {
+                path: 'home',
+                name: 'home',
+                component: ()=>import('@/views/pds/home'),
+                meta: {title: 'home'}
+            },
+            {
+                path: 'wellinfo',
+                name: 'wellinfo',
+                component: () => import('@/views/pds/wellinfo'),
+                meta: {title: 'wellinfo'}
+            },
+            {
+                path: 'case',
+                name: 'case',
+                component: () => import('@/views/pds/home'),
+                meta: {title: 'case'}
+            },
 
         ]
     },
-
 
 
     {

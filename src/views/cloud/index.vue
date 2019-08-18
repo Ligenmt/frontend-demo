@@ -74,7 +74,7 @@
 
             // const controls = new OrbitControls(camera, renderer.domElement)
             var loader2 = new THREE.TextureLoader();
-            loader2.load("http://localhost:8080/static/cloud10.png",
+            loader2.load("/static/cloud10.png",
                 function (texture) {
                     texture.magFilter = THREE.LinearMipMapLinearFilter;
                     texture.minFilter = THREE.LinearMipMapLinearFilter;
