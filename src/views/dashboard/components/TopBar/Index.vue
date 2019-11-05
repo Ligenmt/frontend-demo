@@ -15,7 +15,7 @@
     export default {
       name: "Index",
       data() {
-        console.log(this.$route.matched)
+        // console.log(this.$route.matched)
         return {
 
         }

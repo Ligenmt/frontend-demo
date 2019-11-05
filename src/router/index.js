@@ -51,19 +51,19 @@ const routeMap = [
             {
                 path: 'cube',
                 name: 'cube',
-                component: ()=>import('@/views/cube'),
+                component: ()=>import('@/views/threejs/cube'),
                 meta: {title: 'cube'}
             },
             {
                 path: 'three2',
                 name: 'three2',
-                component: () => import('@/views/three2'),
+                component: () => import('@/views/threejs/three2'),
                 meta: {title: 'three2'}
             },
             {
                 path: 'cloud',
                 name: 'cloud',
-                component: () => import('@/views/cloud'),
+                component: () => import('@/views/threejs/cloud'),
                 meta: {title: 'cloud'}
             },
         ]
@@ -134,7 +134,19 @@ const routeMap = [
 
         ]
     },
-
+    {
+        path: '/echarts',
+        component: Dashboard,
+        meta: {title: 'Echarts', icon: 'home'},
+        children: [
+            {
+                path: 'surface1',
+                name: 'surface1',
+                component: ()=>import('@/views/echarts/surface1'),
+                meta: {title: 'Surface1'}
+            },
+        ]
+    },
 
     {
         path: '*',

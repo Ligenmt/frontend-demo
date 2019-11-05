@@ -16,6 +16,7 @@ Vue.use(ElementUI, {locale});
 Vue.config.productionTip = false
 
 import echarts from 'echarts'
+import 'echarts-gl'
 Vue.prototype.$echarts = echarts
 
 import '@/icons' // icon

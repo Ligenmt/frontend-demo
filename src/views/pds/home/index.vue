@@ -1,25 +1,9 @@
 <template>
     <div class="pds-container">
-        <el-row class="pds-row">
-            <el-col :span="12" style="height: 100%">
-                <div class="pds-card" style="height: calc(40vh);">
-                    <div class="rate-chart" ref="rateChart" id="rateChart" style="width: 100%; height: 100%"></div>
-                </div>
-            </el-col>
-            <el-col :span="6" style="height: 100%">
-                <div class="pds-card" style="height: calc(40vh);">
-                    home
-                </div>
-            </el-col>
-            <el-col :span="6" style="height: 100%">
-                <div class="pds-card" style="height: calc(40vh);">
-                    home
-                </div>
-            </el-col>
-        </el-row>
+
         <el-row class="pds-row">
             <el-col :span="24" style="height: 100%">
-                <div class="pds-card" style="height: calc(40vh);">
+                <div class="pds-card" style="height: calc(80vh);">
                     <div id="map" style="width: 100%; height: 100%;"></div>
                 </div>
             </el-col>
@@ -53,14 +37,14 @@
         },
 
         mounted() {
-            var rateChart = this.$echarts.init(document.getElementById("rateChart"))
-            rateChart.setOption(rateOption)
+            // var rateChart = this.$echarts.init(document.getElementById("rateChart"))
+            // rateChart.setOption(rateOption)
 
             var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
             mapboxgl.accessToken = 'pk.eyJ1IjoibGlnZW5tdCIsImEiOiJjano5bWF2dXgwNWJzM2psa3UyZWNraWhoIn0.D-K8eQB5npFvjrvn-1JiWA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
+                style: 'mapbox://styles/ligenmt/ck2hkv7d60w2n1coing910aea',
                 center: [-74.50, 40],
                 zoom: 2, // starting zoom
             });
@@ -105,6 +89,14 @@
                         'fill-opacity': 0.8
                     }
                 });
+
+                // var layers = map.getStyle().layers;
+                // for (var i = 0; i < layers.length; i++) {
+                //     console.log(JSON.stringify(layers[i]))
+                // }
+                map.on('click', 'testpoints', (e) => {
+                    console.log(e)
+                })
             });
         },
     }

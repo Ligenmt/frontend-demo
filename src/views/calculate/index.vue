@@ -22,7 +22,6 @@
         mounted() {
             this.updateChart()
             getData().then(res => {
-              console.log(res.data)
             })
 
         },
