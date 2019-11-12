@@ -43,6 +43,25 @@ const routeMap = [
         ]
     },
     {
+        path: '/componentdemo',
+        component: Dashboard,
+        meta: {title: '小组件', icon: 'home'},
+        children: [
+            {
+                path: 'backtotop',
+                name: '返回顶部',
+                component: ()=>import('@/views/component-demo/backtotop'),
+                meta: {title: 'Backtotop'},
+            },
+            {
+                path: 'wangeditor',
+                name: 'WangEditor',
+                component: ()=>import('@/views/component-demo/wangeditor'),
+                meta: {title: 'Wangeditor'},
+            },
+        ]
+    },
+    {
         path: '/three',
         component: Dashboard,
         meta: {title: 'Threejs', icon: 'home'},
@@ -73,7 +92,7 @@ const routeMap = [
         name: 'example',
         component: Dashboard,
         redirect: '/example/upload',
-        meta: {title: '例子', icon: 'form'},
+        meta: {title: '页面样式', icon: 'form'},
         children: [
             {
                 path: 'upload',
