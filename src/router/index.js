@@ -9,8 +9,6 @@ Vue.use(Router)
 import Login from '../views/login'
 import Dashboard from '../views/dashboard/Dashboard'
 import Home from '../views/home'
-import Project from '../views/project'
-import DataUpload from '../views/dataupload'
 import RadioNav from '../views/component-demo/radionav'
 import LoadingIcon from '../views/loadingicon'
 
@@ -70,6 +68,12 @@ const routeMap = [
                 name: 'toast',
                 component: ()=>import('@/views/component-demo/toast'),
                 meta: {title: '自定义Toast'}
+            },
+            {
+                path: 'loadingui',
+                name: 'loadingui',
+                component: ()=>import('@/views/component-demo/loadingui'),
+                meta: {title: '自定义Loading页面'}
             },
         ]
     },
@@ -142,18 +146,18 @@ const routeMap = [
         redirect: '/example/upload',
         meta: {title: '页面样式', icon: 'form'},
         children: [
-            {
-                path: 'upload',
-                name: 'upload',
-                component: DataUpload,
-                meta: {title: '数据上传'}
-            },
-            {
-                path: 'query',
-                name: 'query',
-                component: Project,
-                meta: {title: '数据查看'}
-            },
+            // {
+            //     path: 'upload',
+            //     name: 'upload',
+            //     component: DataUpload,
+            //     meta: {title: '数据上传'}
+            // },
+            // {
+            //     path: 'query',
+            //     name: 'query',
+            //     component: Project,
+            //     meta: {title: '数据查看'}
+            // },
             {
                 path: 'loadingicon',
                 name: 'loadingicon',
@@ -164,7 +168,7 @@ const routeMap = [
                 path: 'zhihuparticle',
                 name: 'zhihuparticle',
                 component: () => import('@/views/zhihuparticle'),
-                meta: {title: 'zhihuparticle'}
+                meta: {title: '知乎登录粒子效果'}
             },
         ]
     },

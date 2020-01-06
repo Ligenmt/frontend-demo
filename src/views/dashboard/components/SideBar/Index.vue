@@ -24,7 +24,7 @@
           <template v-for="child in item.children" v-if="!child.hidden">
             <router-link :to="item.path+'/'+child.path" :key="child.name">
               <el-menu-item :index="item.path+'/'+child.path">
-                <i class="el-icon-menu"></i>
+<!--                <i class="el-icon-menu"></i>-->
                 <span slot="title">{{child.meta.title}}</span>
               </el-menu-item>
             </router-link>

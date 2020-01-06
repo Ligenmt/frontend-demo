@@ -10,11 +10,14 @@
 
         methods: {
             click() {
-                this.$toast({
+                let t = this.$toast({
                     text: '我是消息',
                     type: 'warning',
-                    duration: 5000,
+                    duration: 3000,
                 })
+                setTimeout(() => {
+                    t.close()
+                }, 1000)
             },
         },
     }

@@ -1,31 +1,28 @@
-import Vue from 'vue'
+import vue from 'vue'
 import LoadingComponent from './loadingui.vue'
 
-const messageBox = Vue.extend(LoadingComponent)
-console.log('loadingui')
-Message.install = function (options, type) {
-    if (options === undefined || options === null) {
-        options = {
-            content: ''
-        }
-    } else if (typeof options === 'string' || typeof options === 'number') {
-        options = {
-            content: options
-        }
-        if (type != undefined && options != null) {
-            options.type = type;
-        }
-    }
+const LogdingConstructor = vue.extend(LoadingComponent)
 
-    let instance = new messageBox({
-        data: options
-    }).$mount()
-
-    document.body.appendChild(instance.$el)
-
-    Vue.nextTick(() => {
-        instance.visible = true
+function showLoading({type, callback}) {
+    const loadingDom = new LogdingConstructor({
+        el: document.createElement('div'),
+        data () {
+            return {
+                showLoading: true, // 是否显示
+                type: type, // 类型 auto 自动 default 手动
+                callback: callback,
+            }
+        }
     })
+    // 添加节点
+    document.body.appendChild(loadingDom.$el)
+    // 过渡时间
+
+    return loadingDom
+}
+// 全局注册
+function registryLoading () {
+    vue.prototype.$loadingui = showLoading
 }
 
-export default LoadingComponent
+export default registryLoading

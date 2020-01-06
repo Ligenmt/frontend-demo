@@ -21,6 +21,7 @@ function showToast ({ text, type, duration = 2000 }) {
     setTimeout(() => {
         toastDom.isShow = false
     }, duration)
+    return toastDom
 }
 // 全局注册
 function registryToast () {

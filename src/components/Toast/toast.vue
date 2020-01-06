@@ -7,7 +7,14 @@
   </template>
 <script>
     export default {
-        name: "toast"
+        name: "toast",
+        methods: {
+            close() {
+                if (this.isShow) {
+                    this.isShow = false
+                }
+            },
+        },
     }
 </script>
 
