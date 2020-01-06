@@ -11,7 +11,7 @@ import Dashboard from '../views/dashboard/Dashboard'
 import Home from '../views/home'
 import Project from '../views/project'
 import DataUpload from '../views/dataupload'
-import RadioNav from '../views/radionav'
+import RadioNav from '../views/component-demo/radionav'
 import LoadingIcon from '../views/loadingicon'
 
 
@@ -59,6 +59,18 @@ const routeMap = [
                 component: ()=>import('@/views/component-demo/wangeditor'),
                 meta: {title: 'Wangeditor'},
             },
+            {
+                path: 'radionav',
+                name: 'radionav',
+                component: RadioNav,
+                meta: {title: 'Radio导航'}
+            },
+            {
+                path: 'toast',
+                name: 'toast',
+                component: ()=>import('@/views/component-demo/toast'),
+                meta: {title: '自定义Toast'}
+            },
         ]
     },
     {
@@ -88,6 +100,42 @@ const routeMap = [
         ]
     },
     {
+        path: '/two',
+        component: Dashboard,
+        meta: {title: 'Twojs', icon: 'home'},
+        redirect: 'index',
+        children: [
+            {
+                path: 'index',
+                name: 'index',
+                component: ()=>import('@/views/twojs/index'),
+                meta: {title: 'index'}
+            },
+
+        ]
+    },
+    {
+        path: '/canvas',
+        component: Dashboard,
+        meta: {title: 'Canvas', icon: 'home'},
+        // redirect: 'index',
+        children: [
+            {
+                path: 'hotmapd1',
+                name: 'hotmapd1',
+                component: ()=>import('@/views/canvas/hotmapd1'),
+                meta: {title: 'hotmapd1'}
+            },
+            {
+                path: 'hotmapd2',
+                name: 'hotmapd2',
+                component: ()=>import('@/views/canvas/hotmapd2'),
+                meta: {title: 'hotmapd2'}
+            },
+
+        ]
+    },
+    {
         path: '/example',
         name: 'example',
         component: Dashboard,
@@ -105,12 +153,6 @@ const routeMap = [
                 name: 'query',
                 component: Project,
                 meta: {title: '数据查看'}
-            },
-            {
-                path: 'radionav',
-                name: 'radionav',
-                component: RadioNav,
-                meta: {title: 'Radio导航'}
             },
             {
                 path: 'loadingicon',

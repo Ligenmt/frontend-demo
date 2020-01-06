@@ -19,6 +19,10 @@ import echarts from 'echarts'
 import 'echarts-gl'
 Vue.prototype.$echarts = echarts
 
+//自定义Toast组件
+import toastRegistry from './components/toast/index'
+Vue.use(toastRegistry)
+
 import '@/icons' // icon
 
 /* eslint-disable no-new */

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-
+    //绘制曲面需要引入echarts-gl
     export default {
         name: "surface1",
         data() {
