@@ -9,8 +9,7 @@ Vue.use(Router)
 import Login from '../views/login'
 import Dashboard from '../views/dashboard/Dashboard'
 import Home from '../views/home'
-import RadioNav from '../views/component-demo/radionav'
-import LoadingIcon from '../views/loadingicon'
+import LoadingIcon from '../views/page-demo/loadingicon'
 
 
 const routeMap = [
@@ -56,12 +55,6 @@ const routeMap = [
                 name: 'WangEditor',
                 component: ()=>import('@/views/component-demo/wangeditor'),
                 meta: {title: 'Wangeditor'},
-            },
-            {
-                path: 'radionav',
-                name: 'radionav',
-                component: RadioNav,
-                meta: {title: 'Radio导航'}
             },
             {
                 path: 'toast',
@@ -140,24 +133,12 @@ const routeMap = [
         ]
     },
     {
-        path: '/example',
-        name: 'example',
+        path: '/page',
+        name: 'page',
         component: Dashboard,
-        redirect: '/example/upload',
+        redirect: '/page/loadingicon',
         meta: {title: '页面样式', icon: 'form'},
         children: [
-            // {
-            //     path: 'upload',
-            //     name: 'upload',
-            //     component: DataUpload,
-            //     meta: {title: '数据上传'}
-            // },
-            // {
-            //     path: 'query',
-            //     name: 'query',
-            //     component: Project,
-            //     meta: {title: '数据查看'}
-            // },
             {
                 path: 'loadingicon',
                 name: 'loadingicon',
@@ -167,35 +148,30 @@ const routeMap = [
             {
                 path: 'zhihuparticle',
                 name: 'zhihuparticle',
-                component: () => import('@/views/zhihuparticle'),
+                component: () => import('@/views/page-demo/zhihuparticle'),
                 meta: {title: '知乎登录粒子效果'}
+            },
+            {
+                path: 'radionav',
+                name: 'radionav',
+                component: ()=>import('@/views/page-demo/radionav'),
+                meta: {title: 'Radio导航'}
             },
         ]
     },
     {
-        path: '/pds',
+        path: '/mapbox',
         component: Dashboard,
-        meta: {title: 'PDS', icon: 'home'},
+        meta: {title: 'Mapbox', icon: 'home'},
         redirect: 'home',
         children: [
             {
-                path: 'home',
-                name: 'home',
-                component: ()=>import('@/views/pds/home'),
-                meta: {title: 'home'}
+                path: 'polygon',
+                name: 'polygon',
+                component: ()=>import('@/views/pds/polygon'),
+                meta: {title: 'Polygon'}
             },
-            {
-                path: 'wellinfo',
-                name: 'wellinfo',
-                component: () => import('@/views/pds/wellinfo'),
-                meta: {title: 'wellinfo'}
-            },
-            {
-                path: 'case',
-                name: 'case',
-                component: () => import('@/views/pds/home'),
-                meta: {title: 'case'}
-            },
+
 
         ]
     },

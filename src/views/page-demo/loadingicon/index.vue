@@ -31,7 +31,7 @@
 
 <script>
     export default {
-        name: "加载动画"
+        name: "loadingicon"
     }
 </script>
 

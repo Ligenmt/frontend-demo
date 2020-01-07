@@ -13,21 +13,6 @@
 
 <script>
 
-
-    var rateOption = {
-        xAxis: {
-            type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: [{
-            data: [820, 932, 901, 934, 1290, 1330, 1320],
-            type: 'line'
-        }]
-    };
-
     export default {
         name: "pdshome",
         data() {
@@ -46,7 +31,7 @@
                 container: 'map',
                 style: 'mapbox://styles/ligenmt/ck2hkv7d60w2n1coing910aea',
                 center: [-74.50, 40],
-                zoom: 2, // starting zoom
+                zoom: 4, // starting zoom
             });
 
             map.on('load', function () {
