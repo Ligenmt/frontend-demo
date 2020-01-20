@@ -157,6 +157,12 @@ const routeMap = [
                 component: ()=>import('@/views/page-demo/radionav'),
                 meta: {title: 'Radio导航'}
             },
+            {
+                path: 'fixfooter',
+                name: 'fixfooter',
+                component: ()=>import('@/views/page-demo/fixfooter'),
+                meta: {title: '固定底部'}
+            },
         ]
     },
     {

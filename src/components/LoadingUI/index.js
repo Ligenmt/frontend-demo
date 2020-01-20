@@ -17,7 +17,6 @@ function showLoading({type, callback}) {
     // 添加节点
     document.body.appendChild(loadingDom.$el)
     // 过渡时间
-
     return loadingDom
 }
 // 全局注册
