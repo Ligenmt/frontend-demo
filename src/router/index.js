@@ -163,6 +163,12 @@ const routeMap = [
                 component: ()=>import('@/views/page-demo/fixfooter'),
                 meta: {title: '固定底部'}
             },
+            {
+                path: 'excel',
+                name: 'excel',
+                component: ()=>import('@/views/page-demo/handsontable'),
+                meta: {title: 'Excel'}
+            },
         ]
     },
     {

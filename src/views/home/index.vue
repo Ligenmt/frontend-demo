@@ -1,18 +1,17 @@
 <template>
     <div class="main">
-      <el-row :gutter="2">
-        <el-col :span="24">
-          <div class="title">
-            <span>驾驶管理仓</span>
-          </div>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="6">
-            <div class="card-top">
-            </div>
-        </el-col>
-      </el-row>
+        <div class="button">
+            <a><span>Members Login</span></a>
+        </div>
+        <div class="text">
+            <span>Home</span>
+        </div>
+        <div class="rotate">
+        </div>
+        <div class="width">
+        </div>
+
+        <div class="moveblock"></div>
     </div>
 </template>
 
@@ -23,33 +22,89 @@
 </script>
 
 <style scoped>
-  .main {
-    height: 800px;
-    background-size: 100% 100%;
-    background: url('../../assets/images/blue-bg.png') ;
-  }
+    .main {
+        height: 800px;
+        background-size: 100% 100%;
+        margin-left: 100px;
+    }
 
-  .main .title {
-    background-size: 100% 100%;
-    height: 81px;
-    background: rgba(64, 162, 118, 0) url('../../assets/images/blue-title.png') center;
-    transform: translate(10px, 10px);
+    .button a {
+        background-color: transparent;
+        border: solid rgba(97, 101, 250, 1) 1px;
+        cursor: pointer !important;
+        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+        border-radius: 100px;
+    }
 
-    font-size: 25px;
-    color: cyan;
-    font-style: italic;
-    text-align: center;
-    vertical-align: center;
-    line-height: 81px;
-  }
+    .button a:hover {
+        background-color: rgba(97, 101, 250, 1);
+        border-color: transparent;
+    }
 
-  .card-top {
-    background-clip: border-box;
-    background: rgba(64, 162, 118, 0) url('../../assets/images/blue-边框.png');
-    background-size: 100% 100%;
-    background-origin: padding-box;
-    height: calc(10vw);
-    -webkit-transition: transform 0.8s;
-    transform:translate(100px,100px);
-  }
+    .button a:hover span {
+        color: #181818;
+    }
+
+    .button a span {
+        font: normal normal normal 15px/1.875em helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+        transition: color 0.4s ease 0s;
+        color: #6165FA;
+        display: inline-block;
+        margin: calc(-1 * 1px) 1px 0;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .text {
+        background: black;
+        cursor: pointer;
+    }
+
+    .text span {
+        transition: color 0.4s ease 0s;
+        color: #FFFFFF;
+    }
+
+    .text span:hover {
+        color: #243E85;
+        /*transition: color 0.4s ease 0s;*/
+    }
+
+    .moveblock {
+        width:50px;
+        height:400px;
+        margin:0 auto;
+        background-size:60px 60px;
+        background-image:linear-gradient(135deg,red 0%,red 25%,white 25%,white 50%,red 50%,red 75%,white 75%,white 100%);
+        animation:move 1s linear infinite;
+    }
+    @keyframes move {
+        0% {
+        }100% {
+             background-position:60px 0;
+         }
+    }
+
+    .rotate {
+        width: 100px;
+        height: 100px;
+        background: #409EFF;
+        transition: transform 0.5s ease 0s;
+    }
+
+    .rotate:hover {
+        transform: rotate(45deg);
+    }
+
+    .width {
+        width: 100px;
+        height: 100px;
+        background: #409EFF;
+        transition: width 0.5s ease 0s;
+    }
+
+    .width:hover {
+        width: 500px;
+    }
+
 </style>
