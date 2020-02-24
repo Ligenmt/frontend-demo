@@ -9,7 +9,7 @@ Vue.use(Router)
 import Login from '../views/login'
 import Dashboard from '../views/dashboard/Dashboard'
 import Home from '../views/home'
-import LoadingIcon from '../views/page-demo/loadingicon'
+import LoadingIcon from '../views/css-demo/loadingicon'
 
 
 const routeMap = [
@@ -121,30 +121,49 @@ const routeMap = [
                 path: 'hotmapd1',
                 name: 'hotmapd1',
                 component: ()=>import('@/views/canvas/hotmapd1'),
-                meta: {title: 'hotmapd1'}
+                meta: {title: '一维热力图'}
             },
             {
                 path: 'hotmapd2',
                 name: 'hotmapd2',
                 component: ()=>import('@/views/canvas/hotmapd2'),
-                meta: {title: 'hotmapd2'}
+                meta: {title: '二维热力图'}
             },
 
+        ]
+    },
+    {
+        path: '/css',
+        name: 'css',
+        component: Dashboard,
+        meta: {title: 'CSS样式', icon: 'form'},
+        children: [
+            {
+                path: 'flexcenter',
+                name: 'flexcenter',
+                component: ()=>import('@/views/css-demo/flexcenter'),
+                meta: {title: 'flex垂直居中'}
+            },
+            {
+                path: 'loadingicon',
+                name: 'loadingicon',
+                component: LoadingIcon,
+                meta: {title: '加载动画'}
+            },
+            {
+                path: 'borderbox',
+                name: 'borderbox',
+                component: ()=>import('@/views/css-demo/borderbox'),
+                meta: {title: '怪异盒模型'}
+            },
         ]
     },
     {
         path: '/page',
         name: 'page',
         component: Dashboard,
-        redirect: '/page/loadingicon',
-        meta: {title: '页面样式', icon: 'form'},
+        meta: {title: '页面例子', icon: 'form'},
         children: [
-            {
-                path: 'loadingicon',
-                name: 'loadingicon',
-                component: LoadingIcon,
-                meta: {title: 'Loading动画'}
-            },
             {
                 path: 'zhihuparticle',
                 name: 'zhihuparticle',
