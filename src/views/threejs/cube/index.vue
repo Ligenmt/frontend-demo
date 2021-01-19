@@ -5,7 +5,7 @@
 <script>
 
     import * as THREE from 'three';
-    import OrbitControls from 'three-orbitcontrols'
+    const OrbitControls = require("three-orbit-controls")(THREE);
     import * as dat from 'dat.gui';
 
     export default {
@@ -75,7 +75,7 @@
             spotLight.castShadow = true
             spotLight.position.set(15, 30, 50)
             scene.add(spotLight)
-            
+
             var guiCon = new function () {
                 this.rX = 0.01
                 this.rY = 0.01

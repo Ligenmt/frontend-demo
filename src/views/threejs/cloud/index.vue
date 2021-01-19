@@ -8,7 +8,6 @@
 <script>
 
     import * as THREE from 'three';
-    import OrbitControls from 'three-orbitcontrols'
 
     var vs = [
       "varying vec2 vUv;",

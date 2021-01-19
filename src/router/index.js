@@ -89,6 +89,12 @@ const routeMap = [
                 meta: {title: 'cube'}
             },
             {
+                path: 'demo1',
+                name: 'demo1',
+                component: ()=>import('@/views/threejs/demo1'),
+                meta: {title: 'demo1'}
+            },
+            {
                 path: 'model',
                 name: 'model',
                 component: ()=>import('@/views/threejs/model'),

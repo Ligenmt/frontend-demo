@@ -5,7 +5,7 @@
 <script>
 
     import * as THREE from 'three';
-    import OrbitControls from 'three-orbitcontrols'
+    const OrbitControls = require("three-orbit-controls")(THREE);
     import * as dat from 'dat.gui';
 
     let scene, camera, renderer
@@ -79,9 +79,9 @@
         render()
         renderer.render(scene, camera);
     }
-    
+
     function render() {
-        
+
     }
 
     export default {
