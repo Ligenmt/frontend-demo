@@ -68,6 +68,12 @@ const routeMap = [
                 component: ()=>import('@/views/component-demo/loadingui'),
                 meta: {title: '自定义Loading页面'}
             },
+            {
+                path: 'kanban',
+                name: 'kanban',
+                component: ()=>import('@/views/component-demo/kanban'),
+                meta: {title: '看板'}
+            },
         ]
     },
     {
@@ -81,6 +87,12 @@ const routeMap = [
                 name: 'cube',
                 component: ()=>import('@/views/threejs/cube'),
                 meta: {title: 'cube'}
+            },
+            {
+                path: 'model',
+                name: 'model',
+                component: ()=>import('@/views/threejs/model'),
+                meta: {title: 'model'}
             },
             {
                 path: 'three2',

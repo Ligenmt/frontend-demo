@@ -27,3 +27,14 @@
     width: 0;
     height: 0;
 }
+
+.kanban.todo .board-column-header{
+    background: #4A9FF9 !important;
+}
+.kanban.working .board-column-header {
+    background: #f9944a !important;
+}
+
+.kanban.done .board-column-header {
+    background: #2ac06d !important;
+}
