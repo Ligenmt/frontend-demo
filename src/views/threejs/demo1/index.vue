@@ -61,12 +61,12 @@
                 manager.addHandler( /\.dds$/i, new DDSLoader());
                 new MTLLoader(manager)
                     .setPath("/static/")
-                    .load("Slide 48.mtl", (materials) => {
+                    .load("Slide48.mtl", (materials) => {
                         console.log(manager);
                         materials.preload();
                         new OBJLoader(manager)
                             .setMaterials(materials)
-                            .load("/static/Slide 48.obj", (obj) => {
+                            .load("/static/Slide48.obj", (obj) => {
                                 console.log(obj.children[0].material);
                                 obj.scale.set(0.09, 0.09, 0.09);
                                 obj.position.set(0, -7, 0);

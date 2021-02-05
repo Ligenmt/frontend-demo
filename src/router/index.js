@@ -147,6 +147,12 @@ const routeMap = [
                 component: ()=>import('@/views/canvas/hotmapd2'),
                 meta: {title: '二维热力图'}
             },
+            {
+                path: 'wellstructure',
+                name: 'wellstructure',
+                component: ()=>import('@/views/canvas/wellstructure/index.vue'),
+                meta: {title: '井身结构'}
+            },
 
         ]
     },
@@ -156,6 +162,12 @@ const routeMap = [
         component: Dashboard,
         meta: {title: 'CSS样式', icon: 'form'},
         children: [
+            {
+                path: 'test',
+                name: 'test',
+                component: ()=>import('@/views/css-demo/test'),
+                meta: {title: '乱七八糟'}
+            },
             {
                 path: 'flexcenter',
                 name: 'flexcenter',
